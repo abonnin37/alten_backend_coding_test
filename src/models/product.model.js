@@ -12,6 +12,6 @@ const productSchema = new mongoose.Schema({
     rating: { type: Number, required: false },
 });
 
-const Product = mongoose.model('Product', productSchema);
+const ProductModel = mongoose.model('Product', productSchema);
 
-module.exports = Product;
+module.exports = ProductModel;

@@ -1,18 +1,8 @@
 const http = require('http');
-const app = require('./app');
+const app = require('./src/app');
+const dbConfig = require('./src/configs/db.config');
+const port = process.env.PORT || 3000;
 
-const normalizePort = val => {
-    const port = parseInt(val, 10);
-
-    if (isNaN(port)) {
-        return val;
-    }
-    if (port >= 0) {
-        return port;
-    }
-    return false;
-};
-const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 const errorHandler = error => {
